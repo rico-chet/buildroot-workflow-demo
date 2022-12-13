@@ -4,5 +4,16 @@
 	"name": "Ubuntu",
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {"ghcr.io/devcontainers/features/docker-in-docker:2": {}},
-	"onCreateCommand": "sudo apt-get update && sudo apt-get --assume-yes dist-upgrade && sudo apt-get --assume-yes install bash-completion make"
+	"onCreateCommand": "sudo apt-get update && sudo apt-get --assume-yes dist-upgrade && sudo apt-get --assume-yes install bash-completion make",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"EditorConfig.EditorConfig",
+				"luveti.kconfig",
+				"ms-azuretools.vscode-docker",
+				"ms-vscode.cpptools",
+				"ms-vscode.makefile-tools"
+			]
+		}
+	}
 }
