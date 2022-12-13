@@ -4,7 +4,9 @@ MY_PACKAGE_SITE = $(TOPDIR)/package/my-package/src
 
 define HOST_MY_PACKAGE_BUILD_CMDS
 	cd $(@D) \
-	&& $(HOSTCC) $(@D)/my-code.c
+	&& { bear -- $(HOSTCC) $(@D)/my-code.c \
+		|| { cat compile_commands.json; exit 1; }; \
+	}
 endef
 
 define HOST_MY_PACKAGE_INSTALL_CMDS

@@ -25,6 +25,7 @@ RUN eatmydata apt-get install --assume-yes \
     unzip \
     wget \
     ;
+RUN eatmydata apt-get install --assume-yes bear
 
 RUN apt-get purge --assume-yes eatmydata
 RUN apt-get autopurge --assume-yes
