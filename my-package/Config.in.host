@@ -1,0 +1,4 @@
+config BR2_PACKAGE_HOST_MY_PACKAGE
+    bool "my package"
+    help
+      Demonstrate buildroot development workflow.
